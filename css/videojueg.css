@@ -1,0 +1,480 @@
+:root{
+    --bgColor: #17191b;
+    --colorNeon1: #33CCCC;
+    --colorNeon2:#cc33b8;
+    --colorFont:#fff;
+    --gradient: -webkit-linear-gradient(left, var(--colorNeon1), var(--colorNeon2));
+}
+
+*{margin: 0;padding: 0;box-sizing: border-box; font-family: sans-serif;}
+body{
+    padding-top: 150px;
+}
+.header{
+    background-color:var(--bgColor) ;
+    width: 100%;
+    height: 80px;
+    color: var(--colorFont);
+    display: flex;
+    justify-content: space-around;
+    position: fixed; /* Mantiene fijado el header*/
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.header a{
+    text-decoration: none;
+}
+.logo{
+    padding-left: 40px;
+    line-height: 80px;
+    background-image: linear-gradient(45deg, var(--colorNeon1),var(--colorNeon2) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+}
+
+#buscador{
+    position: relative;
+    width: 400px;
+    height: 35px;
+    color: #363738;
+    font-size: 15;
+    font-weight: bold;
+    padding-left: 10px;
+    align-self: center;
+    margin-left: 30px;
+}
+.resultado{
+    width: 400px;
+    position: absolute;
+    top: 60px; 
+    margin-right: 65px; 
+    background:#fff;
+    padding-left: 5px;
+    line-height: 30px;
+    z-index: 4;
+    max-height: 250px;
+    overflow-y: scroll;
+
+}
+.resultado img{
+    width: 40px;
+    height: 40px;
+}
+.resultado a{
+    padding-bottom: 30px;
+   text-decoration:none;
+   color: #363738;
+  
+
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 100px;
+    width: max-content;
+   
+}
+.icons button{
+    background: none;
+    border: none;
+    cursor: pointer;
+   
+}
+.icons button svg{
+    width: 40px;
+    height: 40px;
+    
+    transition: 0.5s;
+    color: var(--colorNeon1);
+
+}
+
+.icons button svg:hover{
+    width: 55px;
+    height: 55px;
+    transition: 0.5s;
+    
+}
+.nav{
+    width: 100%;
+    height: 40px;
+    background-color: var(--bgColor);
+    position: fixed; /* Mantiene fijado el navbar*/
+    top: 80px;
+    left: 0;
+    
+    
+}
+.nav-menu{
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+ 
+    margin: auto;
+    list-style: none;
+}
+
+/*========  Menu Desplegable =========*/
+
+.nav-menu li ul{
+    list-style: none;
+}
+
+.nav-menu  li ul li a{
+    background-color: var(--bgColor);
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: block;
+}
+.nav-menu > li{
+    float: left;
+}
+.nav-menu a:hover{
+
+    border: 3px solid transparent;
+    border-image: var(--gradient);
+    border-image-slice: 1%;
+    transition: 0.1s;
+    transition: 0.1s;
+} 
+
+.nav-menu li ul{
+    display:none;
+    position: absolute;
+    min-height: 170px;
+    z-index: 3;
+}
+.nav-menu li:hover > ul{
+    display: block;
+    z-index: 3;
+}
+/*=================================*/
+
+
+.nav-menu-item{
+   text-transform: uppercase;
+   font-size: 18px;
+}
+.nav-menu-link{
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 20px;
+    transition: 0.3s;
+    line-height: 40px;
+}
+.nav-menu-link:hover{
+    border: 3px solid transparent;
+    border-image: var(--gradient);
+    border-image-slice: 1%;
+    transition: 0.1s;
+
+}
+.toggle{
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    background-image: linear-gradient(45deg, var(--colorNeon2),var(--colorNeon1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        -moz-text-fill-color:transparent;
+        transition: 0.1s;
+    display: none;
+
+
+}
+
+#total{width: 100%;height: 2500px;position: relative;background: white;margin-top: -150px;}
+
+#platafor{width: 250px;height: 250px;position: fixed;background: #17191b;margin-top: 120px;color: white
+;text-align: center;font-family: sans-serif;border-left:3px solid #33CCCC;border-right:3px solid #cc33b8;}
+
+#ps4{width: 200px;height: 25px;position: fixed;margin-top: 150px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border: 3px solid transparent;}
+
+#ps5{width: 200px;height: 25px;position: fixed;margin-top: 190px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border: 3px solid transparent;}
+
+#nintendo{width: 200px;height: 25px;position: fixed;margin-top: 230px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border: 3px solid transparent;}
+
+#pc{width: 200px;height: 25px;position: fixed;margin-top: 270px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border: 3px solid transparent;}
+
+#xboxone{width: 200px;height: 25px;position: fixed;margin-top:310px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border: 3px solid transparent;}
+
+#genero{width: 250px;height: 460px;position: fixed;background: #17191b;margin-top: 370px;color: white
+;text-align: center;font-family: sans-serif;border-left:3px solid #33CCCC;border-right:3px solid #cc33b8;
+border-bottom:3px solid #cc33b8;}
+
+#aventura{width: 200px;height: 25px;position: fixed;margin-top: 400px;margin-left: 25px;background: none;color: white;cursor: pointer;border-style: none;}
+
+#royale{width: 200px;height: 25px;position: fixed;margin-top: 440px;margin-left: 25px;background: none;color: white;cursor: pointer;border-style: none;
+}
+
+#carrera{width: 200px;height: 25px;position: fixed;margin-top: 480px;margin-left: 25px;background: none;color: white;cursor: pointer;border-style: none;
+}
+
+#fps{width: 200px;height: 25px;position: fixed;margin-top: 520px;margin-left: 25px;background: none;color: white;cursor: pointer;border-style: none;
+}
+
+#rpg{width: 200px;height: 25px;position: fixed;margin-top: 560px;margin-left: 25px;background: none;color: white;cursor: pointer;border-style: none;
+}
+
+#tactica{width: 200px;height: 25px;position: fixed;margin-top: 600px;margin-left: 25px;background: none;color: white;cursor: pointer;
+border-style: none;}
+
+#preventa{width: 900px;height: 50px;position: absolute;margin-top: 150px;margin-left: 350px;background: black;text-align: center;
+color: white;border: 6px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego1preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 220px;margin-left: 400px;}
+#precio1{width: 100px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 50px;}
+#boton1{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton1{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego2preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 220px;margin-left: 700px;}
+#precio2{width: 200px;height: 50px;position: absolute;background: white;text-align: center;}
+#boton2{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton2{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego3preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 220px;margin-left: 1000px;}
+#precio3{width: 200px;height: 50px;position: absolute;background: white;text-align: center;}
+#boton3{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton3{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego4preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 600px;margin-left: 400px;}
+#precio4{width: 200px;height: 50px;position: absolute;background: white;text-align: center;}
+#boton4{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton4{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego5preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 600px;margin-left: 700px;}
+#precio5{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#boton5{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton5{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#juego6preventa{width: 200px;height: 350px;position: absolute;background: white;margin-top: 600px;margin-left: 1000px;}
+#precio6{width: 100px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 50px;}
+#boton6{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subboton6{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#todoslosgame{width: 900px;height: 50px;position: absolute;margin-top: 980px;margin-left: 350px;background: black;text-align: center;
+color: white;border: 6px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego1{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1050px;margin-left: 400px;}
+#subprecio1{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan1{width: 150px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton1{width: 100%;;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego2{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1050px;margin-left: 700px;}
+#subprecio2{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan2{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton2{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego3{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1050px;margin-left: 1000px;}
+#subprecio3{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan3{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton3{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego4{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1430px;margin-left: 400px;}
+#subprecio4{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan4{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton4{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego5{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1430px;margin-left: 700px;}
+#subprecio5{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan5{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton5{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego6{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1430px;margin-left: 1000px;}
+#subprecio6{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan6{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton6{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego7{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1810px;margin-left: 400px;}
+#subprecio7{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan7{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton7{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego8{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1810px;margin-left: 700px;}
+#subprecio8{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan8{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton8{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#subjuego9{width: 200px;height: 350px;position: absolute;background: white;margin-top: 1810px;margin-left: 1000px;}
+#subprecio9{width: 150px;height: 50px;position: absolute;background: white;text-align: center;margin-left: 25px;}
+#subbotan9{width: 50px;height: 30px;position: absolute;background: white;text-align: center;margin-top: 47px;}
+#subton9{width: 150px;height: 30px;position: absolute;background: #17191b;cursor: pointer;color: white;
+border: 4px solid transparent;border-image: var(--gradient);border-image-slice: 1%;}
+
+#circulo1{width: 50px;height: 50px;position: absolute;background: black;color: white;margin-top: 2215px;margin-left: 655px;
+border-radius: 25px 25px 25px 25px;cursor: pointer;border-top:3px solid #cc33b8;border-right:3px solid #33CCCC;border-left:3px solid #33CCCC;
+border-bottom:3px solid #cc33b8;}
+
+#circulo2{width: 50px;height: 50px;position: absolute;background: black;color: white;margin-top: 2215px;margin-left: 715px;
+border-radius: 25px 25px 25px 25px;cursor: pointer;border-top:3px solid #cc33b8;border-right:3px solid #33CCCC;border-left:3px solid #33CCCC;
+border-bottom:3px solid #cc33b8;}
+
+#circulo3{width: 50px;height: 50px;position: absolute;background: black;color: white;margin-top: 2215px;margin-left: 775px;
+border-radius: 25px 25px 25px 25px;cursor: pointer;border-top:3px solid #cc33b8;border-right:3px solid #33CCCC;border-left:3px solid #33CCCC;
+border-bottom:3px solid #cc33b8;}
+
+#circulo4{width: 50px;height: 50px;position: absolute;background: black;color: white;margin-top: 2215px;margin-left: 835px;
+border-radius: 25px 25px 25px 25px;cursor: pointer;border-top:3px solid #cc33b8;border-right:3px solid #33CCCC;border-left:3px solid #33CCCC;
+border-bottom:3px solid #cc33b8;}
+
+#circulo5{width: 50px;height: 50px;position: absolute;background: black;color: white;margin-top: 2215px;margin-left: 895px;
+border-radius: 25px 25px 25px 25px;cursor: pointer;border-top:3px solid #cc33b8;border-right:3px solid #33CCCC;border-left:3px solid #33CCCC;
+border-bottom:3px solid #cc33b8;}
+
+
+
+
+
+
+.box{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5%;
+    border-radius: 10px;
+}
+
+.box .hover1{
+    width: 0%;
+    height: 50vh;
+    background-color: #33cccca8;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s all;
+}
+
+.hover1 h1{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.box:hover .hover1{
+    width: 100%;
+}
+footer{
+    margin-top: 40px;
+    background: var(--bgColor);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+ 
+}
+footer a{
+    text-decoration: none;
+    color: var(--colorFont);
+}
+.bloque1{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    
+}
+.left h2{
+    background-image: var(--gradient);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color:transparent;
+   -moz-text-fill-color:transparent;
+   font-size: 1.5rem;  
+}
+.left ul{
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    list-style: none;
+}
+
+.right h3{
+    font-size: 1rem;
+    color: var(--colorFont);
+}
+.right .icons_redes{
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+}
+.icons_redes svg{
+    width: 20px;
+    height: 20px;
+}
+.bloque2{
+    padding-top: 20px;
+    border-top: solid 3px transparent;
+    border-image: linear-gradient(to right, #33CCCC 0%, #cc33b8 100%) 1;
+}
+.bloque2 div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: max-content;
+    margin: auto;
+}
+.bloque2 div img{
+    width: 40px;
+}
+
+.bloque2 p{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--colorFont);
+}
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:120px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
